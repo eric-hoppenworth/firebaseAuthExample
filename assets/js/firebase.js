@@ -8,7 +8,7 @@ var config = {
   messagingSenderId: "945928826461"
 };
 firebase.initializeApp(config);
-var usersEndPoint = firebase.database.ref("/Users");
+var usersEndPoint = firebase.database().ref("/Users");
 var firebaseUser;
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
