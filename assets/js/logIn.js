@@ -37,8 +37,8 @@ $("#btnSignIn").on("click",function(event){
 			var errorMessage = error.message;
 			// ...
 		});
-	$("#userNameInput").val("")
-	$("#userNameInput").val("")
+	$("#userNameInput").val("");
+	$("#userNameInput").val("");
 });
 
 $("#btnSignOut").on("click",function(event){
@@ -46,12 +46,14 @@ $("#btnSignOut").on("click",function(event){
 	//in this example, the button has no default action, but best to be safe!
 	event.preventDefault();
 	firebase.auth().signOut();
-	$("#userNameInput").val("")
-	$("#userNameInput").val("")
+	$("#userNameInput").val("");
+	$("#userNameInput").val("");
+	$("#btnContinue").hide();
+	$("#btnSignOut").hide();
 });
 
 $("#btnContinue").on("click",function(event){
 	if(firebaseUser){
 		window.location("/profile.html");
 	}
-})
+});
