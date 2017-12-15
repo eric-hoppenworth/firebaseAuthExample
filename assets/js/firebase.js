@@ -29,7 +29,7 @@ $("#btnSignUp").on("click",function(event){
   var password = $("#passwordInput").val();
   firebase.auth().createUserWithEmailAndPassword(userName, password)
 	.then(function(user){
-	  usersEndPoint.child(user.uid).set({"userName",user.email})
+	  usersEndPoint.child(user.uid).set({"userName":user.email})
 	})
 	.catch(function(error) {
 	// Handle Errors here.
