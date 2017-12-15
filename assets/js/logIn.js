@@ -9,7 +9,7 @@ $("#btnSignUp").on("click",function(event){
 	firebase.auth().createUserWithEmailAndPassword(userName, password)
 		.then(function(user){
 			usersEndPoint.child(user.uid).set({"userName":user.email});
-			window.location = "/profile.html";
+			window.location = "profile.html";
 		})
 		.catch(function(error) {
 			// Handle Errors here.
@@ -29,7 +29,7 @@ $("#btnSignIn").on("click",function(event){
 	var password = $("#passwordInput").val();
 	firebase.auth().signInWithEmailAndPassword(userName, password)
 		.then(function(user){
-			window.location = "/profile.html";
+			window.location = "profile.html";
 		})
 		.catch(function(error) {
 			// Handle Errors here.
@@ -38,7 +38,7 @@ $("#btnSignIn").on("click",function(event){
 			// ...
 		});
 	$("#userNameInput").val("");
-	$("#userNameInput").val("");
+	$("#passwordInput").val("");
 });
 
 $("#btnSignOut").on("click",function(event){
@@ -47,13 +47,13 @@ $("#btnSignOut").on("click",function(event){
 	event.preventDefault();
 	firebase.auth().signOut();
 	$("#userNameInput").val("");
-	$("#userNameInput").val("");
+	$("#passwordInput").val("");
 	$("#btnContinue").hide();
 	$("#btnSignOut").hide();
 });
 
 $("#btnContinue").on("click",function(event){
 	if(firebaseUser){
-		window.location("/profile.html");
+		window.location("profile.html");
 	}
 });
