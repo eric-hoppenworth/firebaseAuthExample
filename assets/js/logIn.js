@@ -54,6 +54,6 @@ $("#btnSignOut").on("click",function(event){
 
 $("#btnContinue").on("click",function(event){
 	if(firebaseUser){
-		window.location("profile.html");
+		window.location = "profile.html";
 	}
 });
