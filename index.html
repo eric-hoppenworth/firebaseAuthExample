@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Main Page</title>
-</head>
-<body>
+	<head>
+		<title>Main Page</title>
+		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	</head>
 
-<div>
-	<input type="text" id="userNameInput">
-	<input type="password" name="" id="passwordInput">
-	<button id="btnSignIn">Sign In</button>
-	<button id="btnSignUp">Sing Up</button>
-</div>
+	<body>
+
+		<div>
+			<input type="text" id="userNameInput">
+			<input type="password" name="" id="passwordInput">
+			<button class="authenticated" id="btnSignIn">Sign In</button>
+			<button class="authenticated" id="btnSignUp">Sign Up</button>
+			<button class="authenticated" id="btnContinue">Continue To Profile</button>
+			<button class="authenticated" id="btnSignOut">Sign Out</button>
+		</div>
 
 
-<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./assets/js/firebase.js"></script>
-</body>
+		<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="./assets/js/firebase.js"></script>
+		<script src="./assets/js/logIn.js"></script>
+	</body>
 </html>
